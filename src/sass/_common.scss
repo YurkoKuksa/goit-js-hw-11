@@ -1,1 +1,134 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+@import '~node_modules/modern-normalize/modern-normalize.css';
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply a basic body style */
+body {
+  background-color: #bfd8e0;
+  color: #333;
+  line-height: 1.6;
+}
+
+p,
+a {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+/* Style the search form */
+.search-form {
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.search-form input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.search-form button {
+  width: 25%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.search-form button:hover {
+  background-color: #0056b3;
+}
+
+.search-form button:active {
+  background-color: #003366;
+  transform: scale(0.95);
+}
+
+/* Style the gallery container */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  //   gap: 10px;
+}
+
+/* Style each photo card */
+.photo-card {
+  width: 500px;
+  margin: 15px;
+  //   width: calc((100% - 20px) / 4);
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.photo-card:hover {
+  transform: scale(1.05);
+}
+
+.photo-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.photo-card .info {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.photo-card .info p {
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the gallery list */
+.js-gallery {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* Style the backdrop for modal */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* Hide elements with the is-hidden class */
+.is-hidden {
+  display: none;
+}
